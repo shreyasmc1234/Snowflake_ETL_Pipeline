@@ -49,6 +49,17 @@ as
 CALL  etl_snowflake.etl_gold.employee_gold_load();
 
 
+------------To Resume and Pause the Pipe and Tasks --------------------------------------------
+
+Alter pipe my_pipe pipe_execution_paused=TRUE;
+Alter pipe mypipe resume; 
+Alter pipe mypipe pause; 
+
+Alter task bronze_to_silver pause; 
+Alter task bronze_to_silver resume; 
+
+Alter task silver_to_gold pause; 
+Alter task silver_to_gold resume;
 -----------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------
 
